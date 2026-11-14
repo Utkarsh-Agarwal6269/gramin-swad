@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gramin Swad — authentic Rajasthani and desi village-themed pure vegetarian dining in Sikandra, Agra." />
+  <title>Gramin Swad | Swad Gaon Ke Chulhe Ka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terracotta: '#a9432f',
+            saffron: '#d99a2b',
+            cream: '#fff8e9',
+            espresso: '#38251e',
+            leaf: '#2f6b43',
+            clay: '#f5e3c2'
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+            hindi: ['"Noto Sans Devanagari"', 'sans-serif']
+          },
+          boxShadow: {
+            warm: '0 18px 50px rgba(93, 44, 26, .12)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #fff8e9; color: #38251e; }
+    .pattern { background-image: radial-gradient(#d99a2b40 1px, transparent 1px); background-size: 15px 15px; }
+    .hero-image { background-image: linear-gradient(90deg, rgba(56,37,30,.88), rgba(56,37,30,.25)), url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1800&q=85'); background-size: cover; background-position: center; }
+    .food-image { background-size: cover; background-position: center; }
+    .menu-card { animation: rise .35s ease both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-open { max-height: 28rem !important; padding-bottom: 1rem; }
+  </style>
+</head>
+<body class="font-body">
+  <div class="bg-espresso px-4 py-2 text-center text-xs font-semibold tracking-wide text-cream sm:text-sm">Daily open · 12:30 PM – 12:30 AM · 100% Pure Vegetarian</div>
+
+  <header class="sticky top-0 z-50 border-b border-terracotta/10 bg-cream/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="leading-tight">
+        <span class="block font-display text-xl font-extrabold text-terracotta sm:text-2xl">Gramin Swad</span>
+        <span class="font-hindi text-xs font-bold tracking-widest text-saffron">ग्रामीण स्वाद</span>
+      </a>
+      <button id="menuToggle" class="rounded-lg p-2 text-espresso md:hidden" aria-label="Open menu" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div id="navLinks" class="absolute left-0 top-full max-h-0 w-full overflow-hidden bg-cream px-4 transition-all md:static md:flex md:max-h-none md:w-auto md:items-center md:gap-7 md:overflow-visible md:bg-transparent md:px-0">
+        <div class="flex flex-col gap-4 py-4 text-sm font-semibold md:flex-row md:items-center md:py-0">
+          <a class="nav-link hover:text-terracotta" href="#about">About</a>
+          <a class="nav-link hover:text-terracotta" href="#thalis">Signature Thalis</a>
+          <a class="nav-link hover:text-terracotta" href="#menu">Menu</a>
+          <a class="nav-link hover:text-terracotta" href="#reviews">Reviews</a>
+          <a class="nav-link hover:text-terracotta" href="#visit">Visit Us</a>
+          <a href="tel:+919811775315" class="inline-flex w-fit items-center gap-2 rounded-full bg-terracotta px-5 py-2.5 text-sm font-bold text-white transition hover:bg-espresso">Call Now <span>↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-image min-h-[620px]">
+      <div class="mx-auto flex min-h-[620px] max-w-7xl items-center px-5 py-20 sm:px-8">
+        <div class="max-w-2xl text-white">
+          <p class="mb-5 inline-flex rounded-full border border-saffron/70 bg-saffron/20 px-4 py-2 text-xs font-bold uppercase tracking-[.2em] text-saffron">Village dining · Sikandra, Agra</p>
+          <h1 class="font-display text-5xl font-extrabold leading-[1.05] sm:text-7xl">Swad Gaon Ke<br /><span class="text-saffron">Chulhe Ka.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-cream/90 sm:text-xl">Authentic Rajasthani &amp; desi village-themed pure vegetarian dining, where every roti is made with warmth and every meal feels like home.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://wa.me/919811775315?text=Namaste%20Gramin%20Swad%2C%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener" class="rounded-full bg-leaf px-6 py-3.5 text-center font-bold text-white shadow-lg transition hover:bg-[#245637]">Book a Table on WhatsApp</a>
+            <a href="#menu" class="rounded-full border border-cream/60 px-6 py-3.5 text-center font-bold text-white transition hover:bg-white hover:text-espresso">Explore Menu</a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-cream/90">
+            <span>★ 4.2 Google Rated</span><span>✦ Women-Owned</span><span>♧ Free Parking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="pattern px-5 py-20 sm:px-8 lg:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
+        <div class="relative">
+          <img class="h-[420px] w-full rounded-[2rem] object-cover shadow-warm" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Warm, rustic restaurant dining room" loading="lazy" />
+          <div class="absolute -bottom-5 -right-3 rounded-2xl bg-saffron px-5 py-4 text-center font-bold text-espresso shadow-lg sm:-right-5"><span class="block font-display text-3xl">100%</span>Pure Veg</div>
+        </div>
+        <div>
+          <p class="font-bold uppercase tracking-[.18em] text-terracotta">A taste of the village</p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold leading-tight sm:text-5xl">Come hungry.<br /><span class="text-terracotta">Leave with stories.</span></h2>
+          <p class="mt-6 leading-7 text-espresso/75">At Gramin Swad, we bring the soul of Rajasthan and the comfort of a desi kitchen to Sikandra. Settle into our village-hut inspired space, watch the chulha magic unfold, and enjoy food made slowly, honestly and with ghee.</p>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div><span class="text-2xl">🔥</span><h3 class="mt-1 font-bold">Chulha-cooked rotis</h3><p class="mt-1 text-sm text-espresso/65">Bajra, Makka &amp; Hath Ki Roti, fresh off the fire.</p></div>
+            <div><span class="text-2xl">👨‍👩‍👧‍👦</span><h3 class="mt-1 font-bold">Made for togetherness</h3><p class="mt-1 text-sm text-espresso/65">Family meals, birthday celebrations &amp; group parties.</p></div>
+          </div>
+          <p class="mt-7 font-semibold text-leaf">✓ Family-friendly &nbsp; ✓ Free parking &nbsp; ✓ Dine-in · Takeaway · Delivery</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="thalis" class="bg-clay/50 px-5 py-20 sm:px-8 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 flex flex-wrap items-end justify-between gap-5"><div><p class="font-bold uppercase tracking-[.18em] text-terracotta">The house favourites</p><h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Signature Thalis</h2></div><p class="max-w-sm text-sm leading-6 text-espresso/70">A generous spread of regional recipes, handmade breads and sweet endings.</p></div>
+        <div id="thaliGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="menu" class="px-5 py-20 sm:px-8 lg:py-28">
+      <div class="mx-auto max-w-5xl">
+        <div class="text-center"><p class="font-bold uppercase tracking-[.18em] text-terracotta">Eat like a local</p><h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Our Full Menu</h2></div>
+        <div id="categoryTabs" class="my-9 flex flex-wrap justify-center gap-2" role="tablist"></div>
+        <div id="menuGrid" class="grid gap-x-10 gap-y-2 sm:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <section id="booking" class="bg-terracotta px-5 py-20 text-white sm:px-8 lg:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+        <div><p class="font-bold uppercase tracking-[.18em] text-saffron">Pull up a charpai</p><h2 class="mt-3 font-display text-4xl font-extrabold sm:text-5xl">Your table is waiting.</h2><p class="mt-5 max-w-md leading-7 text-white/80">Planning a family dinner, a birthday or a cozy meal at home? Tell us what you need and we’ll take care of the rest on WhatsApp.</p><div class="mt-7 space-y-3 text-sm font-semibold text-white/90"><p>☎ +91 98117 75315</p><p>⏰ Every day · 12:30 PM – 12:30 AM</p></div></div>
+        <form id="bookingForm" class="rounded-3xl bg-cream p-6 text-espresso shadow-warm sm:p-8">
+          <h3 class="font-display text-2xl font-bold">Reserve or order on WhatsApp</h3>
+          <div class="mt-5 grid gap-4 sm:grid-cols-2">
+            <label class="text-sm font-bold">Name<input required name="name" class="mt-1.5 w-full rounded-xl border border-espresso/15 bg-white px-4 py-3 font-normal outline-none focus:border-terracotta" placeholder="Your name" /></label>
+            <label class="text-sm font-bold">Guests<input required name="guests" class="mt-1.5 w-full rounded-xl border border-espresso/15 bg-white px-4 py-3 font-normal outline-none focus:border-terracotta" placeholder="2, 4, Family/Party" /></label>
+            <label class="text-sm font-bold">Date<input required type="date" name="date" class="mt-1.5 w-full rounded-xl border border-espresso/15 bg-white px-4 py-3 font-normal outline-none focus:border-terracotta" /></label>
+            <label class="text-sm font-bold">Time<input required type="time" name="time" class="mt-1.5 w-full rounded-xl border border-espresso/15 bg-white px-4 py-3 font-normal outline-none focus:border-terracotta" /></label>
+          </div>
+          <label class="mt-4 block text-sm font-bold">Request type<select name="request" class="mt-1.5 w-full rounded-xl border border-espresso/15 bg-white px-4 py-3 font-normal outline-none focus:border-terracotta"><option>Table Booking</option><option>Home Delivery</option><option>Birthday Party</option></select></label>
+          <button class="mt-5 w-full rounded-full bg-leaf px-5 py-3.5 font-bold text-white transition hover:bg-[#245637]" type="submit">Continue on WhatsApp →</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="reviews" class="pattern px-5 py-20 sm:px-8 lg:py-28">
+      <div class="mx-auto max-w-7xl"><div class="text-center"><p class="font-bold uppercase tracking-[.18em] text-terracotta">Our guests say it best</p><h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">A little love from Agra</h2></div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <blockquote class="rounded-2xl bg-white p-7 shadow-warm"><div class="text-saffron">★★★★★</div><p class="mt-4 leading-7 text-espresso/75">“The Dal Baati Churma was absolutely authentic and the flavours reminded me of Rajasthan. Generous portions too!”</p><footer class="mt-6 font-bold">— Priya S., Agra</footer></blockquote>
+          <blockquote class="rounded-2xl bg-white p-7 shadow-warm"><div class="text-saffron">★★★★★</div><p class="mt-4 leading-7 text-espresso/75">“Makke ki roti and sarso ka saag were delicious. The village-themed ambience is so warm and peaceful.”</p><footer class="mt-6 font-bold">— Rahul M., Sikandra</footer></blockquote>
+          <blockquote class="rounded-2xl bg-white p-7 shadow-warm"><div class="text-saffron">★★★★★</div><p class="mt-4 leading-7 text-espresso/75">“We celebrated our daughter’s birthday here. Lovely family service, tasty food and plenty of parking.”</p><footer class="mt-6 font-bold">— Ananya K., Agra</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="px-5 py-20 sm:px-8 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+        <div><p class="font-bold uppercase tracking-[.18em] text-terracotta">Come find us</p><h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Visit the chulha.</h2><p class="mt-5 max-w-lg leading-7 text-espresso/75">Karkunj Rd, near Mama Franky &amp; Kulhar Chai, near Aryan College, Sector 9, Avas Vikas Colony, Sikandra, Agra, Uttar Pradesh 282007</p><div class="mt-6 grid gap-3 text-sm"><p><strong>Hours:</strong> Daily, 12:30 PM – 12:30 AM</p><p><strong>Phone:</strong> <a class="text-terracotta underline" href="tel:+919811775315">+91 98117 75315</a></p></div><a class="mt-7 inline-flex rounded-full bg-espresso px-6 py-3 font-bold text-white transition hover:bg-terracotta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gramin+Swad%2C+Karkunj+Road%2C+Sikandra%2C+Agra">Get Directions on Google Maps ↗</a></div>
+        <div class="min-h-[300px] overflow-hidden rounded-3xl bg-clay p-3 shadow-warm"><iframe title="Map showing Gramin Swad location" class="h-full min-h-[300px] w-full rounded-2xl border-0" loading="lazy" src="https://www.google.com/maps?q=Karkunj+Road,+Sikandra,+Agra&output=embed"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-espresso px-5 py-12 text-cream sm:px-8"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-end"><div><p class="font-display text-2xl font-bold text-saffron">Gramin Swad</p><p class="mt-1 font-hindi text-sm text-cream/70">ग्रामीण स्वाद · Swad Gaon Ke Chulhe Ka</p><p class="mt-4 text-sm text-cream/60">Authentic Rajasthani &amp; Desi Village-Themed Pure Veg Dining</p></div><div class="text-sm text-cream/70 sm:text-right"><p>© <span id="year"></span> Gramin Swad, Agra</p><p class="mt-1">Dine-in · Takeaway · Delivery</p></div></div></footer>
+  <a href="https://wa.me/919811775315?text=Namaste%20Gramin%20Swad%2C%20I%20have%20a%20query." target="_blank" rel="noopener" aria-label="Chat with Gramin Swad on WhatsApp" class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-leaf text-2xl text-white shadow-xl transition hover:scale-105">☏</a>
+  <!-- AI_CHATBOT_EMBED_HERE -->
+
+  <script>
+    const whatsapp = '919811775315';
+    const thalis = [
+      ['Dal Bati Churma Thali', '299', '2 Bati, Churma Laddu, Panchmukhi Dal, Lahsun Chutney & Salad', 'https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?auto=format&fit=crop&w=800&q=80'],
+      ['Goan Ki Thali', '350', 'Fresh Aloo Sabji, Lentil Dal, Fragrant Rice, 4 Chulha Ghee Roti, Raita, Papad & Chutney', 'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80'],
+      ['Pradhan Ji Thali', '450', 'Matha Aloo, Baingan Bharta, Kesar Kheer, Raita, 4 Hath Ki Ghee Roti, Papad & Achar', 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'],
+      ['Rajasthani Special Thali', '499', 'Besan Gatte Ki Sabji, Aloo Sabji, Dal, 2 Chulha Ghee Roti, 1 Bati, Churma Laddu, Kesar Kheer & Papad', 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80'],
+      ['Sarpanch Thali', '499', 'Masala Paneer, Mix Veg, Mathe Ke Aloo, Kesar Kheer, Raita, 1 Missi Roti, 1 Butter Naan & Papad', 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80'],
+      ['Navratri Vrat Thali', '350', '4 Falahari Kuttu Atta Poori, Aloo Sabzi, Sabudana Kheer, Sabudana Kachori (3 pcs) & Dahi', 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80']
+    ];
+    const categories = {
+      'Starters': [['Paneer Tikka','320'],['Achari Paneer Tikka','280'],['Malai Paneer Tikka','350'],['Tandoori Soya Chaap','299'],['Malai Chaap','299'],['Tandoori Mushroom','350']],
+      'Main Course': [['Gatte Ki Sabji','280'],['Sev Tamatar','299'],['Panchmukhi Daal','190'],['Dal Makhani','349'],['Kadhi Pakoda','280'],['Matha Aloo','280'],['Sarso Ka Saag','400'],['Shahi Paneer','410'],['Kadai Paneer','450'],['Kadai Mushroom','380'],['Baingan Bharta','250']],
+      'Chulha Breads & Sides': [['Chulha Ghee Roti','35'],['Hath Ki Pani Wali Ghee Roti','45'],['Makke Ki Ghee Roti','50'],['Missi Roti','45'],['Laccha Paratha','120'],['Chur Chur Naan','99'],['Bati with Ghee','55'],['Bathua Raita','190'],['Ghee Churma Laddu','45/pc'],['Chaach','70'],['Lassi','99']],
+      'Rice & Desserts': [['Fragrant Jeera Rice','180'],['Steamed Rice','150'],['Kesar Kheer','160'],['Gulab Jamun','120'],['Rabdi Jalebi','180']]
+    };
+    const waLink = (text) => `https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`;
+    document.getElementById('thaliGrid').innerHTML = thalis.map(([name, price, desc, image]) => `<article class="overflow-hidden rounded-2xl bg-white shadow-warm"><div class="food-image h-44" style="background-image:url('${image}')"></div><div class="p-5"><div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-bold">${name}</h3><span class="whitespace-nowrap font-bold text-terracotta">₹${price}</span></div><p class="mt-3 text-sm leading-6 text-espresso/65">${desc}</p><a class="mt-5 inline-flex rounded-full bg-terracotta px-4 py-2 text-sm font-bold text-white transition hover:bg-espresso" target="_blank" rel="noopener" href="${waLink(`Namaste Gramin Swad, I would like to order/book the ${name} (₹${price}).`)}">Order / Book on WhatsApp</a></div></article>`).join('');
+    const menuGrid = document.getElementById('menuGrid');
+    const tabs = document.getElementById('categoryTabs');
+    function renderCategory(category) {
+      menuGrid.innerHTML = categories[category].map(([name, price], i) => `<div class="menu-card flex items-center justify-between border-b border-espresso/10 py-4" style="animation-delay:${i * 35}ms"><span class="font-semibold">${name}</span><span class="font-bold text-terracotta">₹${price}</span></div>`).join('');
+      [...tabs.children].forEach(tab => tab.classList.toggle('bg-terracotta', tab.dataset.category === category));
+      [...tabs.children].forEach(tab => tab.classList.toggle('text-white', tab.dataset.category === category));
+    }
+    Object.keys(categories).forEach((category, i) => { const button = document.createElement('button'); button.dataset.category = category; button.className = 'rounded-full border border-terracotta/30 px-4 py-2 text-sm font-bold text-terracotta transition hover:bg-terracotta hover:text-white'; button.textContent = category; button.onclick = () => renderCategory(category); tabs.appendChild(button); if (!i) renderCategory(category); });
+    document.getElementById('bookingForm').addEventListener('submit', (event) => { event.preventDefault(); const data = new FormData(event.currentTarget); const message = `Namaste Gramin Swad!%0A%0ARequest: ${data.get('request')}%0AName: ${data.get('name')}%0AGuests: ${data.get('guests')}%0ADate: ${data.get('date')}%0ATime: ${data.get('time')}`; window.open(`https://wa.me/${whatsapp}?text=${message}`, '_blank', 'noopener'); });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('menuToggle'); const nav = document.getElementById('navLinks'); toggle.addEventListener('click', () => { const open = nav.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded', open); }); document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => nav.classList.remove('nav-open')));
+  </script>
+</body>
+</html>
